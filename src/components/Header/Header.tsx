@@ -47,6 +47,8 @@ const Header: FC = () => {
     CATEGORIES_URL,
   );
 
+  //sndfsgdfygsdfgsdgfysdgdfuysg sdgfuysdgfuygs gsdyg fysdgf df hfgid
+  
   const location = useLocation();
 
   const closeOverlay = () => {
