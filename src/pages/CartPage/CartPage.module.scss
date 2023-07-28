@@ -1,0 +1,25 @@
+.wrap {
+}
+.title {
+  @apply text-3xl pt-5;
+}
+.list {
+  @apply flex flex-wrap justify-center gap-2 pt-10;
+}
+.total {
+  @apply w-full border-t-2 border-gray-400 pt-2 mt-5 flex items-center justify-end text-xl;
+}
+.totalCost {
+  @apply font-bold w-[120px] flex items-center justify-end;
+}
+
+@media screen and (max-width: 900px) {
+  .wrap {
+    @apply px-[5%];
+  }
+}
+@media screen and (max-width: 600px) {
+  .wrap {
+    @apply px-4;
+  }
+}

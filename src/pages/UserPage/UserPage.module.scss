@@ -1,0 +1,64 @@
+.wrap {
+}
+.title {
+  @apply text-3xl pt-5;
+}
+.main {
+  @apply pt-10 flex items-start gap-10;
+}
+.avatarInfo {
+}
+.avatar {
+  @apply w-[300px] h-[300px] overflow-hidden rounded-lg shadow-xl bg-gray-800;
+  img {
+    @apply w-full;
+  }
+}
+.from {
+  @apply w-full;
+}
+.inputs {
+  @apply w-full grid grid-cols-1 gap-10;
+}
+
+.input {
+  @apply w-auto border-b-2 border-gray-800 outline-none py-1 pr-8 bg-transparent;
+}
+.btns {
+  @apply w-full flex items-center justify-between mt-5;
+}
+.btn {
+}
+.exit {
+  @apply py-2 px-20 flex items-center justify-center text-gray-800 border-2 rounded-md border-gray-800 transition-colors hover:bg-gray-800 hover:text-gray-100;
+}
+@media screen and (max-width: 900px) {
+  .wrap {
+    @apply px-[5%];
+  }
+  .inputs {
+    @apply gap-5;
+  }
+}
+@media screen and (max-width: 750px) {
+  .main {
+    @apply flex-col;
+  }
+}
+@media screen and (max-width: 450px) {
+  .avatarInfo {
+    @apply w-full;
+  }
+  .avatar {
+    @apply w-full h-auto;
+  }
+  .exit__wrap {
+    @apply w-full flex flex-col items-center gap-2;
+    span {
+      @apply text-xl font-semibold;
+    }
+  }
+  .exit {
+    @apply w-full;
+  }
+}

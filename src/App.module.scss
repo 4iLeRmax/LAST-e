@@ -1,0 +1,18 @@
+.wrap {
+  @apply w-[80%] mx-auto pt-16;
+}
+@media screen and (max-width: 1200px) {
+  .wrap {
+    @apply pt-[57px] w-[90%];
+  }
+}
+@media screen and (max-width: 900px) {
+  .wrap {
+    @apply w-full;
+  }
+}
+@media screen and (max-width: 450px) {
+  .wrap {
+    @apply pt-[53px];
+  }
+}

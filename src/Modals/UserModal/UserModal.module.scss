@@ -1,0 +1,12 @@
+.wrap {
+  @apply absolute top-14 right-0 shadow-xl bg-white flex items-center justify-between gap-2 rounded-xl;
+}
+.avatar {
+  @apply w-16 h-16 rounded-xl overflow-hidden;
+}
+.info {
+  @apply px-4;
+  h1{
+    @apply text-xl font-semibold
+  }
+}

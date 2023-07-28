@@ -1,0 +1,12 @@
+.input__wrap {
+  @apply w-full mt-4;
+  input {
+    @apply w-full border-b-2 border-gray-800 outline-none py-1;
+  }
+}
+.formBtn {
+  @apply mt-5 w-full py-2 flex items-center justify-center bg-gray-800 text-gray-100 tracking-widest rounded-md transition-colors hover:bg-gray-700;
+}
+.secondaryBtn {
+  @apply w-full flex items-center justify-center mt-2 text-sm;
+}

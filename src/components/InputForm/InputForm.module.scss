@@ -1,0 +1,29 @@
+.wrap {
+  @apply flex items-center gap-5 relative;
+  h1 {
+    @apply w-28 text-xl font-medium text-gray-800;
+  }
+  button {
+    @apply w-36 py-1 bg-gray-800 text-gray-100 rounded-md border-2 border-gray-800 transition-colors hover:bg-transparent hover:text-gray-800;
+  }
+}
+.input__wrap {
+  @apply relative w-full;
+}
+.input {
+  @apply w-full border-b-2 border-gray-800 outline-none py-1 pr-8 bg-transparent;
+}
+.password__visibility {
+  @apply w-[34px] h-[34px] absolute top-0 right-0 flex justify-center items-center cursor-pointer;
+}
+@media screen and (max-width: 1000px){
+  .wrap{
+    @apply flex-col items-start gap-0
+  }
+  .input__wrap{
+    @apply mb-5
+  }
+  .button__wrap{
+    @apply w-full flex justify-end
+  }
+}

@@ -1,0 +1,7 @@
+.title {
+  @apply text-3xl pt-5;
+}
+.list {
+  @apply grid gap-6 pt-10;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}

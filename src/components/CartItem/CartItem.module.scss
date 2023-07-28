@@ -1,0 +1,82 @@
+.CartItem {
+  @apply p-3 shadow-xl rounded-xl w-full flex items-center justify-between gap-10 relative;
+}
+.main {
+  @apply flex items-center gap-3 w-auto;
+  h1 {
+    @apply h-12 w-[80%] flex items-center;
+  }
+}
+.img {
+  @apply w-[50px] h-[50px] overflow-hidden  relative;
+  img {
+    @apply absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] scale-75;
+  }
+}
+.info {
+  @apply flex items-center gap-10 select-none;
+}
+.quantity {
+  @apply flex items-center justify-center gap-2 select-none;
+  .count {
+    @apply w-5 flex items-center justify-center;
+  }
+  button {
+    @apply p-2 rounded-full transition-colors hover:bg-gray-200;
+  }
+}
+
+.prices {
+  @apply flex items-center justify-between gap-5 w-[150px];
+  span:nth-child(2) {
+    @apply font-medium text-lg;
+  }
+}
+.close {
+  @apply p-2 rounded-full transition-colors hover:bg-gray-200 cursor-pointer;
+}
+@media screen and (max-width: 1200px) {
+  .main {
+    h1 {
+      @apply w-full h-auto;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .prices {
+    @apply w-[100px] justify-center;
+  }
+  .price {
+    @apply hidden;
+  }
+  .info {
+    @apply gap-2;
+  }
+}
+@media screen and (max-width: 900px) {
+  .CartItem {
+    @apply justify-center flex-col gap-2;
+  }
+  .main {
+    @apply w-full;
+    h1 {
+      @apply pr-10;
+    }
+  }
+  .img {
+    @apply w-[100px] h-[100px];
+  }
+  .info {
+    @apply w-full justify-between gap-2;
+  }
+  .close {
+    @apply absolute top-3 right-3;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main {
+    h1 {
+      @apply text-sm;
+    }
+  }
+}

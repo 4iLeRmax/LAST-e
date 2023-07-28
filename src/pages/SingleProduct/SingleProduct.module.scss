@@ -1,0 +1,72 @@
+.product {
+  @apply pt-3;
+}
+.card {
+  @apply w-full shadow-xl rounded-xl p-8 flex justify-between items-start gap-10 mb-20;
+}
+.image {
+  @apply w-[50%] overflow-hidden h-[400px] relative;
+  img {
+    @apply absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] h-[400px];
+  }
+}
+
+.info {
+  @apply w-[50%];
+}
+.title {
+  @apply text-3xl;
+}
+.description {
+  @apply pt-5;
+}
+// import { Product, TCategories } from '../../types';
+.add {
+  @apply w-full flex items-start justify-between pt-10;
+}
+.price {
+  @apply text-3xl;
+}
+.rating {
+  @apply flex flex-col items-end;
+  span {
+    @apply text-xl;
+  }
+}
+
+.btns {
+  @apply flex items-center justify-between pt-5;
+  button {
+    @apply py-2 px-5 shadow-xl rounded-xl transition-shadow hover:shadow-inner hover:scale-95;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .card {
+    @apply flex-col;
+  }
+  .image {
+    // @apply w-[400px];
+    @apply w-full;
+  }
+  .info {
+    @apply w-full;
+  }
+}
+@media screen and (max-width: 900px) {
+  .card__wrap {
+    @apply px-[5%];
+  }
+}
+@media screen and (max-width: 500px) {
+  .image {
+    img {
+      @apply w-full h-auto;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .image {
+    @apply h-[300px];
+  }
+}

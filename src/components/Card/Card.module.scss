@@ -1,0 +1,41 @@
+.wrap {
+  // @apply max-w-[350px]
+}
+.Card {
+  @apply relative bg-white shadow-xl p-6 rounded-2xl;
+}
+.img {
+  @apply w-full overflow-hidden h-[300px] relative mb-3;
+  img {
+    @apply absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] scale-75;
+  }
+  .scale {
+    @apply scale-100;
+  }
+}
+.title {
+  @apply text-lg h-[56px];
+}
+.category {
+  @apply text-gray-700 mb-6;
+}
+.add {
+  @apply w-full flex justify-between items-center;
+}
+.price {
+  @apply text-xl;
+}
+.cart {
+  @apply p-2 rounded-xl cursor-pointer transition-colors hover:bg-gray-200;
+}
+.fav {
+  @apply absolute z-10 top-6 right-6 cursor-pointer p-2 transition-colors hover:bg-gray-200 rounded-xl;
+}
+@media screen and (max-width: 450px) {
+  .Card {
+    @apply w-[90%] mx-auto;
+  }
+  .img {
+    // @apply
+  }
+}
