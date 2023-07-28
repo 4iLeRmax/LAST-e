@@ -46,8 +46,6 @@ const Header: FC = () => {
     'categories',
     CATEGORIES_URL,
   );
-
-  //sndfsgdfygsdfgsdgfysdgdfuysg sdgfuysdgfuygs gsdyg fysdgf df hfgid
   
   const location = useLocation();
 
