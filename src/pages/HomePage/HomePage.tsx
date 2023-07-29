@@ -18,9 +18,6 @@ const HomePage = () => {
     PRODUCTS_URL,
   );
 
-  //sdbfusgduf sfhusydgfsdgf sdgfsudgf fsdf
-  //sdfsdfsd 
-
   const reversedRecents = reverseList(recents);
 
   return (
