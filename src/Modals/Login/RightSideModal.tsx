@@ -28,12 +28,6 @@ const RightSideModal = ({ close }: LoginFormProps) => {
       {createPortal(
         <motion.div
           className={css.wrapper}
-          // initial={{ x: 200, opacity: 0 }}
-          // animate={{ x: 0, opacity: 1 }}
-          // exit={{ x: 200, opacity: 0 }}
-          // initial={{ y: 500, opacity: 0, scale: 0 }}
-          // animate={{ y: 0, opacity: 1, scale: 1 }}
-          // exit={{ y: 500, opacity: 0, scale: 0 }}
           initial={width > 500 ? { x: 200, opacity: 0 } : { y: 500, opacity: 0, scale: 0 }}
           animate={width > 500 ? { x: 0, opacity: 1 } : { y: 0, opacity: 1, scale: 1 }}
           exit={width > 500 ? { x: 200, opacity: 0 } : { y: 500, opacity: 0, scale: 0 }}
@@ -45,7 +39,7 @@ const RightSideModal = ({ close }: LoginFormProps) => {
             </button>
             <div className={css.title}>{formType}</div>
           </div>
-          <AnimatePresence>
+          <AnimatePresence initial={false}>
             {formType === 'SIGNUP' ? (
               <SignUpForm setFormType={setFormType} />
             ) : (
