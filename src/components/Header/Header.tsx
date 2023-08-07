@@ -24,6 +24,7 @@ import RightSideModal from '../../Modals/Login/RightSideModal';
 import UserModal from '../../Modals/UserModal/UserModal';
 
 import styles from './Header.module.scss';
+import BurgerMenu from '../../UI/BurgerMenu/BurgerMenu';
 
 const Header: FC = () => {
   const { access_token } = useAppSelector(({ user }) => user.tokens);
@@ -46,7 +47,7 @@ const Header: FC = () => {
     'categories',
     CATEGORIES_URL,
   );
-  
+
   const location = useLocation();
 
   const closeOverlay = () => {
@@ -127,12 +128,9 @@ const Header: FC = () => {
       </AnimatePresence>
 
       <AnimatePresence>{isShowForm && <RightSideModal close={closeOverlay} />}</AnimatePresence>
+
       <div className={styles.Header}>
-        <div className={styles.menu}>
-          <button onClick={() => setActive((p) => !p)}>
-            {active ? <AiOutlineClose size={25} /> : <BiMenuAltLeft size={25} />}
-          </button>
-        </div>
+        <BurgerMenu active={active} setActive={setActive} />
 
         <NavLink to='/' className={styles.logo}>
           LAST'e

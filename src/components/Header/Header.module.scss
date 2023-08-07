@@ -3,9 +3,6 @@
 .Header {
   @apply bg-white py-4 px-[10%] shadow-xl flex justify-between items-center fixed w-full z-20;
 }
-.menu {
-  @apply hidden;
-}
 .logo {
   @apply text-4xl;
   font-family: 'Abril Fatface', cursive;
@@ -57,9 +54,6 @@
 @media screen and (max-width: 1200px) {
   .Header {
     @apply border-b-[1px] border-[#4a4a4a] py-2;
-  }
-  .menu {
-    @apply flex;
   }
   .nav__links {
     @apply w-full absolute bg-white shadow-xl top-[57px] left-0 py-2 border-b-[1px] border-[#4a4a4a] px-[5%] -left-full transition-all;
