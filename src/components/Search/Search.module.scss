@@ -1,12 +1,23 @@
-.Search {
-  @apply flex items-center justify-center gap-4 w-full relative;
+.search {
+  @apply relative w-[45%];
+  .search__dropdown {
+    @apply w-full rounded-xl top-12 h-[250px] overflow-y-scroll;
+  }
 }
-.icon {
-  @apply absolute top-2 left-3;
+
+@media screen and (max-width: 600px) {
+  .search {
+    @apply w-full;
+    .search__dropdown {
+      @apply fixed w-[90%] left-[5%] top-[60px];
+    }
+  }
 }
-.icon__close {
-  @apply absolute top-0 right-3 cursor-pointer p-2;
-}
-.input {
-  @apply w-full outline-none bg-gray-200 py-1 px-10 rounded-xl;
+
+@media screen and (max-width: 450px) {
+  .search {
+    .search__dropdown {
+      @apply top-[56px];
+    }
+  }
 }

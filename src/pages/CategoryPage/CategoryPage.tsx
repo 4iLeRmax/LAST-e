@@ -17,14 +17,14 @@ const CategoryPage = () => {
   );
 
   return (
-    <>
+    <div className={css.wrap}>
       <h1 className={css.title}>{name?.toUpperCase()}</h1>
       <div className={css.list}>
         {category?.data.map((product) => (
           <Card key={product.id} product={product} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -5,7 +5,8 @@ import { motion } from 'framer-motion';
 
 import { Product } from '../../types';
 
-import styles from '../../components/Header/Header.module.scss';
+// import styles from '../../components/Header/Header.module.scss';
+import styles from './SearchModal.module.scss';
 
 interface SearchModalProps {
   searchValue: string;
@@ -16,13 +17,13 @@ interface SearchModalProps {
 const SearchModal: FC<SearchModalProps> = ({ products, searchValue, setSearchValue }) => {
   return (
     <>
-      {searchValue.length > 0 && (
+      {searchValue.length ? (
         <motion.div
           className={cn(styles.dropdown, styles.search__dropdown)}
           initial={{ x: 400, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 400, opacity: 0 }}
-          transition={{ type: 'tween', duration: .2 }}
+          transition={{ type: 'tween', duration: 0.2 }}
         >
           {products?.data.length &&
           products?.data.filter(({ title }) =>
@@ -46,7 +47,7 @@ const SearchModal: FC<SearchModalProps> = ({ products, searchValue, setSearchVal
             <span className={styles.error}>No result</span>
           )}
         </motion.div>
-      )}
+      ) : null}
     </>
   );
 };

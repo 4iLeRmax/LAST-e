@@ -5,10 +5,29 @@
 }
 .list {
   @apply grid gap-6 pt-10;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media screen and (max-width: 1500px) {
+  .list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 @media screen and (max-width: 900px) {
   .wrap {
     @apply px-[5%];
+  }
+  .list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  .list {
+    @apply gap-2;
+  }
+}
+@media screen and (max-width: 450px) {
+  .list {
+    grid-template-columns: 1fr;
   }
 }

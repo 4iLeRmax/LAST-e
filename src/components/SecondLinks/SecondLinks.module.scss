@@ -1,0 +1,45 @@
+.links {
+  @apply flex items-center gap-5 select-none bg-white;
+  .link {
+    @apply text-xl flex items-center gap-1 cursor-pointer relative z-0;
+  }
+}
+.add__link {
+  @apply relative;
+  span {
+    @apply absolute z-50 top-[60%] right-[60%] w-5 h-5 bg-red-700 flex justify-center items-center rounded-full text-white;
+  }
+}
+
+.avatar {
+  @apply w-8 h-8 overflow-hidden rounded-full bg-slate-500;
+}
+
+.fakeAvatar {
+  @apply w-8 h-8 rounded-full bg-slate-500;
+}
+
+@media screen and (max-width: 1200px) {
+  .links {
+    .dropdown {
+      @apply top-[37px];
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mobile__links {
+    @apply flex;
+  }
+  .avatar {
+    @apply w-10 h-10;
+  }
+  .links {
+    .dropdown {
+      @apply rounded-ss-xl right-[50%];
+    }
+  }
+  .icons {
+    @apply hidden;
+  }
+}

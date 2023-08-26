@@ -1,33 +1,41 @@
-import React, { FC } from 'react';
-import { BsSearch } from 'react-icons/bs';
-import { IoMdClose } from 'react-icons/io';
+import React from 'react';
+import { AnimatePresence } from 'framer-motion';
 
-import styles from './Search.module.scss';
+import InputSearch from '../../UI/InputSearch/InputSearch';
+import SearchModal from '../../Modals/SearchModal/SearchModal';
+
+import css from './Search.module.scss';
+import { useFetch } from '../../hooks/useFetch';
+import { PRODUCTS_URL } from '../../utils/config';
+import { UseQueryResult } from '@tanstack/react-query';
+import { Product } from '../../types';
 
 interface SearchProps {
-  value: string;
-  setValue: React.Dispatch<React.SetStateAction<string>>;
+  searchValue: string;
+  setSearchValue: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Search: FC<SearchProps> = ({ value, setValue }) => {
+const Search = ({ searchValue, setSearchValue }: SearchProps) => {
+  const { data: products }: UseQueryResult<{ data: Product[] }> = useFetch(
+    'products',
+    PRODUCTS_URL,
+  );
+
   return (
-    <div className={styles.Search}>
-      <div className={styles.icon}>
-        <BsSearch size='16px' />
+    <>
+      <div className={css.search}>
+        <InputSearch value={searchValue} setValue={setSearchValue} />
+        <AnimatePresence>
+          {products?.data.length && (
+            <SearchModal
+              products={products}
+              searchValue={searchValue}
+              setSearchValue={setSearchValue}
+            />
+          )}
+        </AnimatePresence>
       </div>
-      {value.length > 0 && (
-        <div className={styles.icon__close} onClick={() => setValue('')}>
-          <IoMdClose size='16px' />
-        </div>
-      )}
-      <input
-        className={styles.input}
-        type='text'
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        placeholder='Search...'
-      />
-    </div>
+    </>
   );
 };
 

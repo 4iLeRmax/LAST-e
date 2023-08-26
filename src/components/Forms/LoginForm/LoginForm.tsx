@@ -41,9 +41,9 @@ const LoginForm = ({ setFormType }: LoginFormProps) => {
   const navigate = useNavigate();
 
   const onSubmit = handleSubmit((data) => {
-    // console.log(data);
-    mutate(data);
-    reset();
+    console.log(data);
+    // mutate(data);
+    // reset();
   });
 
   const handleNavigate = () => {
@@ -100,7 +100,7 @@ const LoginForm = ({ setFormType }: LoginFormProps) => {
             </div>
 
             <button
-              className='mt-5 w-full py-2 flex items-center justify-center bg-gray-800 text-gray-100 tracking-widest rounded-md transition-colors hover:bg-gray-700'
+              className='flex items-center justify-center w-full py-2 mt-5 tracking-widest text-gray-100 transition-colors bg-gray-800 rounded-md hover:bg-gray-700'
               type='submit'
             >
               Login

@@ -11,7 +11,13 @@ const FavouritesPage = () => {
       <h1 className={css.title}>FAVOURITES</h1>
       <div className={css.list}>
         {favourites.length > 0 ? (
-          favourites.map((product) => <Card key={product.id} product={product} />)
+          favourites.map((product) => (
+            <>
+              {/* <div className='w-[280px]'> */}
+              <Card key={product.id} product={product} />
+              {/* </div> */}
+            </>
+          ))
         ) : (
           <div className='text-center'>Favourites is empty</div>
         )}

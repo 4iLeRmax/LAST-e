@@ -1,6 +1,6 @@
 import css from './UserModal.module.scss';
 
-interface UserModalProps {
+export interface UserModalProps {
   avatar: string;
   name: string;
   email: string;

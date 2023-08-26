@@ -1,0 +1,35 @@
+.dropdown {
+  @apply absolute -z-40 top-12 bg-white rounded-es-xl rounded-ee-xl shadow-lg w-48 overflow-hidden;
+  .navlink {
+    @apply block py-2 px-4 hover:bg-gray-200;
+  }
+}
+
+.search__dropdown {
+  @apply w-full rounded-xl top-12 h-[250px] overflow-y-scroll;
+}
+
+.error {
+  @apply absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-2xl text-gray-400;
+}
+
+@media screen and (max-width: 1200px) {
+  .dropdown {
+    @apply top-[37px];
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .dropdown {
+    @apply rounded-ss-xl right-[50%];
+  }
+  .search__dropdown {
+    @apply fixed w-[90%] left-[5%] top-[60px];
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .search__dropdown {
+    @apply top-[56px];
+  }
+}
